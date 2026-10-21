@@ -1,0 +1,67 @@
+/* Design tokens. Every colour, font and spacing value in the app comes from here. */
+:root {
+  /* paper & ink */
+  --paper: #f4efe6;
+  --paper-raised: #fbf8f2;
+  --paper-sunk: #ebe4d6;
+  --ink: #1b1a17;
+  --ink-2: #4a463f;
+  --ink-3: #847d71;
+  --rule: #d8cfbe;
+  --rule-strong: #b9ae99;
+
+  /* accents (project inks) */
+  --vermilion: #d9411e;
+  --moss: #4f6b3a;
+  --ochre: #b8841c;
+  --slate: #3f5b6b;
+  --plum: #6e3b5c;
+  --accent: var(--vermilion);
+  --accent-ink: #fff8f1;
+  --late: #b4321a;
+  --soon: #9a6c10;
+  --focus: #2f5bd3;
+
+  /* type */
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* rhythm */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 72px;
+  --radius: 3px;
+  --sidebar: 268px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #17150f;
+    --paper-raised: #201d16;
+    --paper-sunk: #110f0b;
+    --ink: #efe8da;
+    --ink-2: #c4bba9;
+    --ink-3: #8a8272;
+    --rule: #332e25;
+    --rule-strong: #4a4337;
+    --vermilion: #f0603c;
+    --moss: #8dab72;
+    --ochre: #dcaa45;
+    --slate: #86a8bb;
+    --plum: #c287ad;
+    --accent-ink: #17150f;
+    --late: #f0603c;
+    --soon: #dcaa45;
+    --focus: #8fb0ff;
+    color-scheme: dark;
+  }
+}
