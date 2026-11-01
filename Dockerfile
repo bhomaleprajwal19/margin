@@ -7,7 +7,7 @@ COPY frontend/ ./
 RUN npm run build
 
 # ---- 2. build Python wheels (compilers stay in this stage) ----
-FROM python:3.12-slim AS wheels
+FROM python:3.15-slim AS wheels
 RUN apt-get update \
  && apt-get install -y --no-install-recommends gcc pkg-config default-libmysqlclient-dev \
  && rm -rf /var/lib/apt/lists/*
@@ -15,7 +15,7 @@ COPY backend/requirements.txt backend/requirements-prod.txt ./
 RUN pip wheel --no-cache-dir --wheel-dir /wheels -r requirements-prod.txt
 
 # ---- 3. runtime image: Django serves the API and the built frontend ----
-FROM python:3.12-slim
+FROM python:3.15-slim
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
